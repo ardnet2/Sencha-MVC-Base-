@@ -20,6 +20,12 @@ Ext.regController('LandingController', {
 				MyApp.views.aboutPanel, dataObj.animation
 		);
 	},
+	homeClick : function(dataObj) {
+		//to to appPanel view
+		MyApp.views.viewport.setActiveItem(
+				MyApp.views.home, dataObj.animation
+		);
+	},
 	deleteContact : function(dataObj) {
 		var model = dataObj.model,
 		modelStore = model.store;

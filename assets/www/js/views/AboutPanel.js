@@ -12,7 +12,7 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
     //dockedItems: [toolbar1],
     //layout: 'fit',
     title: 'About',
-    html: '<h2>About page</h2><p><img src="assets/sencha.png">&nbsp&nbsp;&nbsp&nbsp;<img src="assets/plusSign.gif"> <img src="assets/PhoneGapLogo-150x150.png">',
+    html: '<div style="position:absolute;top: 40%;position:absolute;left: 30%;"><div>About 1</div><div>About 2</div><div>About 3</div></div>',
     //animation: 'slide',
 	initComponent : function() {
 		this.dockedItems = this.buildDockedItems();
@@ -78,6 +78,14 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
 			},
 			items : [
 			{
+				title: 'Home',
+				id: 'tab6',
+				html: '<h1>Home</h1>',
+				action: 'homeClick',
+				cls: 'card card6',
+				iconCls: 'info'
+			},         
+			{
     			title: 'Contact List',
     			id: 'tab3',
     			handler : this.onBtnTap,
@@ -127,7 +135,7 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
 			};
 	},
 	onBtnTap : function(btn) {
-		Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
+		//Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
 				
 		Ext.dispatch({
 			controller : btn.controller,

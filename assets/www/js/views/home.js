@@ -8,7 +8,7 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
     //dockedItems: [toolbar1],
     //layout: 'fit',
     title: 'HEEEEEY',
-    html: '<h2>Sencha Panel, prob need to add container...</h2><p><img src="assets/sencha.png">&nbsp&nbsp;&nbsp&nbsp;<img src="assets/plusSign.gif"> <img src="assets/PhoneGapLogo-150x150.png">',
+    html: '<div style="position:absolute;top: 40%;position:absolute;left: 30%;"><img src="assets/sencha.png">&nbsp&nbsp;&nbsp&nbsp;<img src="assets/plusSign.gif"> <img src="assets/PhoneGapLogo-150x150.png"></div>',
     //animation: 'slide',
 	initComponent : function() {
 		this.dockedItems = this.buildDockedItems();
@@ -74,6 +74,14 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
 			},
 			items : [
 			{
+			    title: 'Home',
+			    id: 'tab6',
+			    html: '<h1>Home</h1>',
+			    action: 'homeClick',
+			    cls: 'card card6',
+			    iconCls: 'info'
+			},
+			{
     			title: 'Contact List',
     			id: 'tab3',
     			handler : this.onBtnTap,
@@ -102,7 +110,7 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
     			html: 'About',
     			action: 'aboutClick',
     			iconCls: 'info',
-    			cls: 'card card1',
+    			cls: 'card card4',
     			listeners: {
     				//'beforeshow': showRecent
     			}
@@ -115,44 +123,16 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
     			title: 'Settings',
     			id: 'tab4',
     			html: '<h1>Settings</h1>',
-    			cls: 'card card4',
+    			cls: 'card card5',
     			iconCls: 'settings',
     			badgeText: '4 Updates'
     		}
 			]
 			};
-		
-			/*
-			xtype : 'tabbar',
-			dock : 'bottom',
-			defaults : {
-			scope : this,
-			handler : this.onBtnTap,
-			controller : 'ContactFormPanelController'
-			},
-			items : [
-			{
-			text : 'New',
-			action : 'newContact'
-			},
-			{
-			text : 'Save',
-			action : 'saveContact'
-			},
-			{
-			xtype : 'spacer'
-			},
-			{
-			text : 'Delete',
-			action : 'deleteContact',
-			controller : 'ContactListController'
-			}
-			]
-			};
-			*/
+			
 	},
 	onBtnTap : function(btn) {
-		Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
+		//Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
 				
 		Ext.dispatch({
 			controller : btn.controller,
