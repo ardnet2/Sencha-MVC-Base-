@@ -93,24 +93,47 @@ MyApp.AppPanel = Ext.extend(Ext.Panel, {
 			defaults : {
 				scope : this,
 				handler : this.onBtnTap,
-				controller : 'ContactFormPanelController'
+				controller : 'LandingController'
 			},
 			items : [
 			{
-    			title: 'Downloads',
+			    title: 'Home',
+			    id: 'tab6',
+			    html: '<h1>Home</h1>',
+			    action: 'homeClick',
+			    cls: 'card card6',
+			    iconCls: 'info'
+			},
+			{
+    			title: 'Contact List',
     			id: 'tab3',
-    			html: '<h1>Downloads</h1>',
+    			handler : this.onBtnTap,
+    			html: '<h1>Contact Listing</h1>',
+    			action: 'buttonClick',
     			badgeText: '2 New',
     			cls: 'card card3',
     			iconCls: 'download'
-    		},
+    			/*
+    			listeners:  {
+    		          'tap': function () {
+    		        	  
+    		        	  Ext.Msg.alert('Hello! in tap');
+    		        	  Ext.dispatch({
+    		                  controller: LandingController,
+    		                  action: 'LandingPanel',
+    		                  animation: {type:'slide', direction:'left'}
+    		                });
+    		          }
+    			}*/
+			},
 			{
     			title: 'About',
     			id: 'tab1',
-    			//html: '<h1>Bottom Tabs</h1><p>Docking tabs to the bottom will automatically change their style. The tabs below are type="light", though the standard type is dark. Badges (like the 4 &amp; Long title below) can be added by setting <code>badgeText</code> when creating a tab/card or by using <code>setBadge()</code> on the tab later.</p>',
+    			handler : this.onBtnTap,
     			html: 'About',
+    			action: 'aboutClick',
     			iconCls: 'info',
-    			cls: 'card card1',
+    			cls: 'card card4',
     			listeners: {
     				//'beforeshow': showRecent
     			}
@@ -123,7 +146,7 @@ MyApp.AppPanel = Ext.extend(Ext.Panel, {
     			title: 'Settings',
     			id: 'tab4',
     			html: '<h1>Settings</h1>',
-    			cls: 'card card4',
+    			cls: 'card card5',
     			iconCls: 'settings',
     			badgeText: '4 Updates'
     		}

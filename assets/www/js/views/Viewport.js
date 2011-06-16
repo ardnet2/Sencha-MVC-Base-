@@ -27,7 +27,8 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
         	landingPanel: new MyApp.LandingPanel(),
         	appPanel: new MyApp.AppPanel(),
         	contactFormPanel: new MyApp.ContactFormPanel(),
-        	aboutPanel: new MyApp.AboutPanel()
+        	aboutPanel: new MyApp.AboutPanel(),
+        	settingsPanel: new MyApp.SettingsPanel()
         });
         //put instances of cards into viewport
         Ext.apply(this, {
@@ -38,7 +39,8 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 					MyApp.views.landingPanel,
 					MyApp.views.appPanel,
 					MyApp.views.contactFormPanel,
-					MyApp.views.aboutPanel
+					MyApp.views.aboutPanel,
+					MyApp.views.settingsPanel
 				]
         });
 				

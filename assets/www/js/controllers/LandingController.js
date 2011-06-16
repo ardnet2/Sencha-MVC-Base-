@@ -14,6 +14,12 @@ Ext.regController('LandingController', {
 				MyApp.views.appPanel, dataObj.animation
 		);
 	},
+	settingsClick : function(dataObj) {
+		//to to appPanel view
+		MyApp.views.viewport.setActiveItem(
+				MyApp.views.settingsPanel, dataObj.animation
+		);
+	},
 	aboutClick : function(dataObj) {
 		//to to appPanel view
 		MyApp.views.viewport.setActiveItem(

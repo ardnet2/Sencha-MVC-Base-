@@ -123,9 +123,10 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
     			title: 'Settings',
     			id: 'tab4',
     			html: '<h1>Settings</h1>',
+    			action: 'settingsClick',
     			cls: 'card card5',
     			iconCls: 'settings',
-    			badgeText: '4 Updates'
+    			badgeText: '4 Updatesss'
     		}
 			]
 			};
