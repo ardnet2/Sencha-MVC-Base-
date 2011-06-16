@@ -9,6 +9,7 @@ Ext.regApplication({
 	    this.mainLaunch();
 		
 		/* EX of defining a view to come up on load
+		 * POSSIBLE ADD A CONTAINER PANEL HERE WITH THE NAV IN IT!
 		new MyApp.HomePanel({
 			fullscreen : true
 		});
