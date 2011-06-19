@@ -11,18 +11,18 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
     html: '<div style="position:absolute;top: 40%;position:absolute;left: 30%;"><img src="assets/sencha.png">&nbsp&nbsp;&nbsp&nbsp;<img src="assets/plusSign.gif"> <img src="assets/PhoneGapLogo-150x150.png"></div>',
     //animation: 'slide',
 	initComponent : function() {
-		this.dockedItems = this.buildDockedItems();
+		//this.dockedItems = this.buildDockedItems();
 		this.items = {
 				//xtype : 'ContactFormPanel'
 		};
 		
-		MyApp.AppPanel.superclass.initComponent.call(this);
+		MyApp.HomePanel.superclass.initComponent.call(this);
 	},
 	buildDockedItems : function() {
 		return [
 		        //this.buildTopDockToolbar(),
 		        //this.buildLeftDockList(),
-		        this.buildBottomDockToolBar()
+		        //this.buildBottomDockToolBar()
 		        ];
 	},
 	buildTopDockToolbar : function() {
@@ -165,3 +165,5 @@ MyApp.HomePanel = Ext.extend(Ext.Panel, {
 		});
 	}
 });	
+
+Ext.reg('HomePanel',MyApp.HomePanel);

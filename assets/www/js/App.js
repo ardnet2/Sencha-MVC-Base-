@@ -20,6 +20,8 @@ Ext.regApplication({
     	if (!this.launched) {return;}
 			//call the viewport where ALL the view are defined,
     		//view listed 1st will come up first on app load
-			this.views.viewport = new this.views.Viewport();
+    	this.views.viewport = new this.views.Viewport();    
+    	//this.views.containerPanel = new this.views.ContainerPanel();
+    	    
     }
 });

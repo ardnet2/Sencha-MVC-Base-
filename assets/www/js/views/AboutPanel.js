@@ -15,12 +15,12 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
     html: '<div style="position:absolute;top: 40%;position:absolute;left: 30%;"><div>About 1</div><div>About 2</div><div>About 3</div></div>',
     //animation: 'slide',
 	initComponent : function() {
-		this.dockedItems = this.buildDockedItems();
+		//this.dockedItems = this.buildDockedItems();
 		this.items = {
 				//xtype : 'ContactFormPanel'
 		};
 		
-		MyApp.AppPanel.superclass.initComponent.call(this);
+		MyApp.AboutPanel.superclass.initComponent.call(this);
 	},
 	buildDockedItems : function() {
 		return [
@@ -135,7 +135,7 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
 			};
 	},
 	onBtnTap : function(btn) {
-		//Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
+		Ext.Msg.alert('Hello!', btn.action + ' was clicked!');
 				
 		Ext.dispatch({
 			controller : btn.controller,
@@ -167,3 +167,5 @@ MyApp.AboutPanel = Ext.extend(Ext.Panel, {
 		});
 	}
 });	
+
+Ext.reg('AboutPanel',MyApp.AboutPanel);

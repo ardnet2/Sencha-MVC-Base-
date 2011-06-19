@@ -16,7 +16,7 @@ MyApp.LandingPanel = Ext.extend(Ext.TabPanel, {
 	title: 'Main',
 	layout : 'fit',
 	initComponent : function() {
-		this.dockedItems = this.buildDockedItems();
+		//this.dockedItems = this.buildDockedItems();
 		this.items = {
 				xtype : 'LandingList'
 		};
