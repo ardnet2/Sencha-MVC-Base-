@@ -75,7 +75,7 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 			{
 			    title: 'Home',
 			    id: 'tab6',
-			    html: '<h1>AAHome</h1>',
+			    html: '<h1>Home</h1>',
 			    action: 'homeClick',
 			    cls: 'card card6',
 			    iconCls: 'info'
@@ -132,7 +132,7 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 			
 	},
 	onBtnTap : function(btn) {
-		Ext.Msg.alert('Container Panel', btn.action + ' was clicked!');
+		//Ext.Msg.alert('Container Panel', btn.action + ' was clicked!');
 		Ext.dispatch({
 			controller : btn.controller,
 			action : btn.action,
