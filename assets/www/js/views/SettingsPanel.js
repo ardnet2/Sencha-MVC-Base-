@@ -8,7 +8,6 @@ MyApp.SettingsPanel = Ext.extend(Ext.form.FormPanel, {
 		labelWidth : 65
 	},
 	initComponent : function() {
-		//this.dockedItems = this.buildDockedItems();
 		this.items = this.buildItems();
 		MyApp.SettingsPanel.superclass.initComponent.call(this);
 	},

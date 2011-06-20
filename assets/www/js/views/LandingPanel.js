@@ -16,18 +16,13 @@ MyApp.LandingPanel = Ext.extend(Ext.TabPanel, {
 	title: 'Main',
 	layout : 'fit',
 	initComponent : function() {
-		//this.dockedItems = this.buildDockedItems();
 		this.items = {
 				xtype : 'LandingList'
 		};
-		
 		MyApp.LandingPanel.superclass.initComponent.call(this);
 	},
 	buildDockedItems : function() {
 		return [
-		        //this.buildTopDockToolbar(), <--- //THIS WILL ADD CONTAINER AROUND EVERYTHING W/ TITLE
-		        //this.buildLeftDockList(),
-		        //this.buildBottomDockToolBar(),
 		        this.buildTabBar()
 		        ];
 	},
@@ -155,6 +150,3 @@ MyApp.LandingPanel = Ext.extend(Ext.TabPanel, {
 		});
 	}
 });	
-
-
- 

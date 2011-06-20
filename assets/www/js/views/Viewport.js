@@ -80,16 +80,10 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
     			badgeText: '2 New',
     			cls: 'card card3',
     			iconCls: 'download'
-    			/*
+    			/* EX of using a listener for tap event
     			listeners:  {
     		          'tap': function () {
-    		        	  
-    		        	  Ext.Msg.alert('Hello! in tap');
-    		        	  Ext.dispatch({
-    		                  controller: LandingController,
-    		                  action: 'LandingPanel',
-    		                  animation: {type:'slide', direction:'left'}
-    		                });
+    		        	  Ext.Msg.alert('Hello in tap');
     		          }
     			}*/
 			},
@@ -101,10 +95,6 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
     			action: 'aboutClick',
     			iconCls: 'info',
     			cls: 'card card4',
-    			listeners: {
-    				//'beforeshow': showRecent
-    			}
-
     		},
 			/*{
 			xtype : 'spacer'

@@ -9,7 +9,6 @@ MyApp.LandingList = Ext.extend(Ext.List, {
 	emptyText : 'No contacts defined.',
 	allowDeselect : false,
 	onRender : function() {
-		console.log(Ext.StoreMgr.get('blah'));
 		MyApp.LandingList.superclass.onRender.apply(this, arguments);
 		this.store.load();
 	}
