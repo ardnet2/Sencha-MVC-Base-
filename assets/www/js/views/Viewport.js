@@ -1,10 +1,6 @@
-/**
- * 
- */
+/** */
 //define docked items
 var dockedItems = [];
-
-var initMask;
 
 //define viewport
 MyApp.views.Viewport = Ext.extend(Ext.Panel, {
@@ -22,7 +18,6 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
     	//NOTE: order is important here!
     	this.dockedItems = this.buildDockedItems();
         Ext.apply(MyApp.views, {
-        	//containerPanel: new MyApp.ContainerPanel(),
         	home: new MyApp.HomePanel(),
         	contactList: new MyApp.ContactList(),
         	landingList: new MyApp.LandingList(),
@@ -35,7 +30,6 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
         //put instances of cards into viewport
         Ext.apply(this, {
           items: [
-                  	//MyApp.views.containerPanel,
                   	MyApp.views.home,
                   	MyApp.views.contactList,
                   	MyApp.views.landingList,
@@ -48,12 +42,9 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
         });
 				
         MyApp.views.Viewport.superclass.initComponent.apply(this, arguments);
-        //MyApp.Viewport.superclass.initComponent.call(this);
     },
 	buildDockedItems : function() {
 		return [
-		        //this.buildTopDockToolbar(),
-		        //this.buildLeftDockList(),
 		        this.buildBottomDockToolBar()
 		        ];
 	},
@@ -132,15 +123,10 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 			
 	},
 	onBtnTap : function(btn) {
-		//Ext.Msg.alert('Container Panel', btn.action + ' was clicked!');
 		Ext.dispatch({
 			controller : btn.controller,
 			action : btn.action,
-			//model : model,
-			views : {
-			//contactForm : contactForm,
-			//contactList : contactList
-			}
+			views : {}
 			});
 		},
 });
