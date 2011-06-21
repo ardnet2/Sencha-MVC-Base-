@@ -1,4 +1,4 @@
-/** */
+/**  This is where all the views are defined.  It also is wear the bottom navigation is defined */
 //define docked items
 var dockedItems = [];
 
@@ -11,7 +11,7 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 		//dock top and bottom layout
 		dockedItems: dockedItems,
 		listeners:{
-			//listeners here
+			//listeners could here
 		},
     initComponent: function() {
         //put instances of cards into application namespace
@@ -45,6 +45,7 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
     },
 	buildDockedItems : function() {
 		return [
+		        //build the bottom navigation tabbar, this will be through-out the app
 		        this.buildBottomDockToolBar()
 		        ];
 	},

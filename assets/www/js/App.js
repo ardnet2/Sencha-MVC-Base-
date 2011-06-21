@@ -1,4 +1,4 @@
-/** this is called when app is launced, call mainLaunch() and call Viewport() which defines all out views.  'MyApp' is defining a namespace for app */
+/** This is called when app is launched, call mainLaunch() and call Viewport() which defines all out views.  'MyApp' is defining a namespace for app */
 Ext.regApplication({
 	name : 'MyApp',
 	launch : function() {
@@ -16,7 +16,7 @@ Ext.regApplication({
 	},
 	mainLaunch: function() {
     	if (!this.launched) {return;}
-			//call the viewport where ALL the view are defined,
+			//call the viewport where ALL the view are defined and loaded,
     		//view listed 1st will come up first on app load
     		this.views.viewport = new this.views.Viewport();    
     	    
