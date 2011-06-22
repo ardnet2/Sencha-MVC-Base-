@@ -15,6 +15,7 @@ MyApp.AppPanel = Ext.extend(Ext.Panel, {
 		return [
 		        this.buildTopDockToolbar(),
 		        this.buildLeftDockList(),
+		        this.buildBottomDockToolBar()
 		        ];
 	},
 	buildTopDockToolbar : function() {

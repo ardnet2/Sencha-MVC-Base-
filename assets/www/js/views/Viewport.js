@@ -20,8 +20,6 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
         Ext.apply(MyApp.views, {
         	home: new MyApp.HomePanel(),
         	contactList: new MyApp.ContactList(),
-        	landingList: new MyApp.LandingList(),
-        	landingPanel: new MyApp.LandingPanel(),
         	appPanel: new MyApp.AppPanel(),
         	contactFormPanel: new MyApp.ContactFormPanel(),
         	aboutPanel: new MyApp.AboutPanel(),
@@ -32,8 +30,6 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
           items: [
                   	MyApp.views.home,
                   	MyApp.views.contactList,
-                  	MyApp.views.landingList,
-					MyApp.views.landingPanel,
 					MyApp.views.appPanel,
 					MyApp.views.contactFormPanel,
 					MyApp.views.aboutPanel,
