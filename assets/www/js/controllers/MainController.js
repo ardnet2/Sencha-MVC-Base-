@@ -1,7 +1,7 @@
 /**
  * 
  */
-Ext.regController('LandingController', {
+Ext.regController('MainController', {
 	itemTap : function(dataObj) {
 		var views = dataObj.views,
 		contactForm = views.contactForm,

@@ -57,7 +57,7 @@ MyApp.views.Viewport = Ext.extend(Ext.Panel, {
 			defaults : {
 				scope : this,
 				handler : this.onBtnTap,
-				controller : 'LandingController'
+				controller : 'MainController'
 			},
 			items : [
 			{
